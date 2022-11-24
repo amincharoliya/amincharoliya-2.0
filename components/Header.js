@@ -2,7 +2,15 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import clsx from 'clsx';
-import { Hamburger, Xmark } from '../utils/Icons';
+import {
+	Code,
+	Contact,
+	Hamburger,
+	Home,
+	Pen,
+	Work,
+	Xmark,
+} from '../utils/Icons';
 
 const ThemeSwitch = dynamic(() => import('./ThemeSwitch'), {
 	ssr: false,
@@ -22,54 +30,51 @@ const Header = () => {
 			)}
 		>
 			<div className="container flex md:m-auto md:justify-center md:items-center">
-				<nav role="Main Navigation" className="md:ml-auto">
-					<ul className="flex flex-col md:flex-row md:justify-center">
+				<nav role="Main Navigation" className="md:ml-auto w-full">
+					<ul className="flex flex-col md:flex-row md:justify-center w-full">
 						<li>
 							<Link
 								href="#"
-								className="py-4 px-2 mx-3 inline-block text-lg dark:text-white hover:text-theme outline-theme"
+								className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 							>
-								Home
+								<Home size={25} />
+								<span className="ml-3">Home</span>
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className="py-4 px-2 mx-2 inline-block text-lg dark:text-white hover:text-theme outline-theme"
+								className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 							>
-								Work
+								<Work size={25} />
+								<span className="ml-3">Work</span>
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className="py-4 px-2 mx-2 inline-block text-lg dark:text-white hover:text-theme outline-theme"
+								className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 							>
-								Profolio
+								<Code size={24} />
+								<span className="ml-3">Profolio</span>
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className="py-4 px-2 mx-2 inline-block text-lg dark:text-white hover:text-theme outline-theme"
+								className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 							>
-								Blog
+								<Pen size={25} />
+								<span className="ml-3">Blog</span>
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="#"
-								className="py-4 px-2 mx-2 inline-block text-lg dark:text-white hover:text-theme outline-theme"
+								className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 							>
-								Recommendations
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="#"
-								className="py-4 px-2 mx-2 inline-block text-lg dark:text-white hover:text-theme outline-theme"
-							>
-								Contact
+								<Contact size={25} />
+								<span className="ml-3">Contact</span>
 							</Link>
 						</li>
 					</ul>

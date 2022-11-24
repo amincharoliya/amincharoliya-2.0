@@ -1,12 +1,12 @@
 import Layout from '../components/Layout';
 import Header from '../components/Header';
+import Banner from '../components/Home/Banner';
 
 export default function Home() {
 	return (
 		<Layout>
-			<div className="min-h-screen font-inter">
-				<Header />
-			</div>
+			<Header />
+			<Banner />
 		</Layout>
 	);
 }

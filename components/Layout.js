@@ -6,7 +6,7 @@ const ThemeSwitch = dynamic(() => import('./ThemeSwitch'), {
 
 const Layout = ({ children, title }) => {
 	return (
-		<>
+		<div className="min-h-screen font-inter bg-gray-100 dark:bg-slate-900 dark:text-white">
 			<Head>
 				<title>
 					{title ? `${title} | Amin Charoliya` : 'Amin Charoliya'}
@@ -21,7 +21,7 @@ const Layout = ({ children, title }) => {
 			<div className="fixed bottom-10 right-10 md:hidden">
 				<ThemeSwitch />
 			</div>
-		</>
+		</div>
 	);
 };
 

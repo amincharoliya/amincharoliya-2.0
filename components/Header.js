@@ -25,11 +25,11 @@ const Header = () => {
 	return (
 		<header
 			className={clsx(
-				'group fixed inset-0 w-2/3 md:w-full md:static md:flex flex-column bg-white dark:bg-slate-800 border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200',
+				'group fixed z-10 inset-0 w-full md:static md:flex flex-column bg-white dark:bg-slate-900 border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0',
 				showNav ? 'left-0' : '-left-full closed'
 			)}
 		>
-			<div className="container flex md:m-auto md:justify-center md:items-center">
+			<div className="lg:container w-full px-5 pt-5 md:pt-0 flex md:justify-center md:items-center">
 				<nav role="Main Navigation" className="md:ml-auto w-full">
 					<ul className="flex flex-col md:flex-row md:justify-center w-full">
 						<li>

@@ -25,7 +25,7 @@ const Header = () => {
 	return (
 		<header
 			className={clsx(
-				'group fixed z-10 inset-0 w-full md:static md:flex flex-column bg-white dark:bg-slate-900 border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0',
+				'group fixed z-20 inset-0 w-full md:static md:flex flex-column bg-white dark:bg-slate-900 border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0',
 				showNav ? 'left-0' : '-left-full closed'
 			)}
 		>

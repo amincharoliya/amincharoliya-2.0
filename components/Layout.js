@@ -6,7 +6,7 @@ const ThemeSwitch = dynamic(() => import('./ThemeSwitch'), {
 
 const Layout = ({ children, title }) => {
 	return (
-		<div className="min-h-screen font-inter bg-gray-100 dark:bg-slate-900 dark:text-white">
+		<div className="min-h-screen font-inter bg-gray-100 dark:bg-slate-900 text-content-light dark:text-content-dark ">
 			<Head>
 				<title>
 					{title ? `${title} | Amin Charoliya` : 'Amin Charoliya'}

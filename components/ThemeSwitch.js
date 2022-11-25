@@ -11,7 +11,10 @@ const ThemeSwitch = () => {
 		}
 	};
 	return (
-		<button className="dark:text-white" onClick={() => ToggleTheme()}>
+		<button
+			className="text-theme dark:text-white"
+			onClick={() => ToggleTheme()}
+		>
 			{theme == 'dark' ? <Moon /> : <Sun />}
 		</button>
 	);

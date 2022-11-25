@@ -38,7 +38,7 @@ const Testimonials = () => {
 				>
 					{testimonials.map((item) => (
 						<div
-							className="mb-12 p-4 mr-6 bg-white dark:bg-slate-800 shadow rounded-sm"
+							className="mb-12 p-4 mx-3 bg-white dark:bg-slate-800 shadow rounded-sm"
 							key={item.id}
 						>
 							<div className="flex items-center mb-6 justify-start">

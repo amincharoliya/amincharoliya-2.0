@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from '../utils/Icons';
 
-const ThemeSwitch = () => {
+const ThemeSwitch = ({ classes }) => {
 	const { theme, setTheme } = useTheme();
 	const ToggleTheme = () => {
 		if (theme == 'dark') {
@@ -11,10 +11,7 @@ const ThemeSwitch = () => {
 		}
 	};
 	return (
-		<button
-			className="text-theme dark:text-white"
-			onClick={() => ToggleTheme()}
-		>
+		<button className={classes} onClick={() => ToggleTheme()}>
 			{theme == 'dark' ? <Moon /> : <Sun />}
 		</button>
 	);

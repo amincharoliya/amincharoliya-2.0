@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import {
 	Code,
@@ -17,26 +17,47 @@ const ThemeSwitch = dynamic(() => import('./ThemeSwitch'), {
 });
 const Header = () => {
 	const [showNav, setShowNav] = useState(false);
-	const [scrolled, setScrolled] = useState(false);
+	const [scrolled, setScrolled] = useState(true);
 	const header = useRef(null);
+	const lastScroll = useRef(0);
+
+	const handleScroll = useCallback(() => {
+		const currentScroll = window.pageYOffset;
+		if (currentScroll <= 0) {
+			setScrolled(true);
+			return;
+		}
+
+		if (currentScroll > lastScroll.current && scrolled) {
+			setScrolled(false);
+		} else if (currentScroll < lastScroll.current && !scrolled) {
+			setScrolled(true);
+			// up
+		}
+		lastScroll.current = currentScroll;
+	}, [scrolled]);
 
 	useEffect(() => {
-		document.addEventListener('scroll', () => {
-			window.pageYOffset > 60 ? setScrolled('true') : setScrolled(false);
-		});
-	}, []);
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [handleScroll]);
 
 	const toggleShowNav = () => {
 		setShowNav(!showNav);
 	};
 
 	return (
-		<div className="h-16">
+		<>
+			<div className="h-16 hidden md:block"></div>
 			<header
 				className={clsx(
-					'group fixed z-20 inset-0 w-full bg-white/[0.85] dark:bg-slate-900/[0.85] md:flex flex-column   border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0 md:top-0 md:right-0 md:bottom-auto',
+					'group fixed z-20 inset-0 w-full bg-white/[0.85] dark:bg-slate-900/[0.85] flex-column border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0 md:top-0 md:right-0 md:bottom-auto',
 					showNav ? 'left-0' : '-left-full closed',
-					scrolled && 'backdrop-blur'
+					scrolled && 'md:backdrop-blur md:flex block',
+					!scrolled && 'hidden',
+					showNav && 'backdrop-blur'
 				)}
 				ref={header}
 			>
@@ -91,10 +112,10 @@ const Header = () => {
 						</ul>
 					</nav>
 					<div className="hidden md:block ml-auto">
-						<ThemeSwitch />
+						<ThemeSwitch classes={'text-theme dark:text-white'} />
 					</div>
 					<button
-						className="fixed top-10 right-10 md:hidden"
+						className="fixed top-10 right-10 bg-theme text-content-dark dark:text-content-light rounded-sm p-2 md:hidden"
 						onClick={() => toggleShowNav()}
 					>
 						<span className="hidden group-[.closed]:block">
@@ -106,7 +127,7 @@ const Header = () => {
 					</button>
 				</div>
 			</header>
-		</div>
+		</>
 	);
 };
 

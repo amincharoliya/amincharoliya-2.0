@@ -19,7 +19,11 @@ const Layout = ({ children, title }) => {
 			</Head>
 			{children}
 			<div className="fixed bottom-10 right-10 md:hidden">
-				<ThemeSwitch />
+				<ThemeSwitch
+					classes={
+						'bg-theme text-content-dark dark:text-content-light rounded-sm p-2'
+					}
+				/>
 			</div>
 		</div>
 	);

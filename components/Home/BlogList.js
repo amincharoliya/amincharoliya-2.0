@@ -2,7 +2,6 @@
 import Link from 'next/link';
 
 const BlogList = ({ posts }) => {
-	console.log('path', posts);
 	return (
 		<div className="lg:container px-5 py-14">
 			<h2 className="text-2xl font-bold text-heading-light dark:text-heading-dark leading-tight mb-16 md:text-3xl lg:text-4xl md:pt-5 text-center">

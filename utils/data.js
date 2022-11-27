@@ -64,3 +64,60 @@ export const testimonials = [
 		image: 'mohit.jpg',
 	},
 ];
+
+export const work = [
+	{
+		id: 1,
+		name: 'Multidots',
+		positions: [
+			{
+				id: 1,
+				date: 'Jul - 2014 to Mar - 2016',
+				position: 'Front End Developer',
+			},
+			{
+				id: 2,
+				date: 'Apr - 2016 to Oct - 2016',
+				position: 'Sr. Front End Developer',
+			},
+		],
+	},
+	{
+		id: 2,
+		name: 'Conversion Bug',
+		positions: [
+			{
+				id: 1,
+				date: 'Nov - 2016 to Oct - 2017',
+				position: 'Sr. Software Developer',
+			},
+		],
+	},
+	{
+		id: 3,
+		name: 'Multidots',
+		positions: [
+			{
+				id: 1,
+				date: 'Nov - 2017 to Sep - 2018',
+				position: 'Sr. Front End Developer',
+			},
+			{
+				id: 2,
+				date: 'Oct - 2018 to Oct - 2019',
+				position: 'Team Lead Front End',
+			},
+		],
+	},
+	{
+		id: 4,
+		name: 'BuddyBoss',
+		positions: [
+			{
+				id: 1,
+				date: 'Nov - 2019 to Present',
+				position: 'Sr. Front End Developer',
+			},
+		],
+	},
+];

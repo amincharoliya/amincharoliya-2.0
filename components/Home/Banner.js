@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Banner = () => {
 	return (
-		<div className="relative">
+		<section className="relative">
 			<div className="lg:container px-5 py-28">
 				<div className="flex flex-col md:flex-row relative z-10">
 					<div className="md:w-1/2 order-2 md:order-1 lg:pl-14">
@@ -35,7 +35,7 @@ const Banner = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

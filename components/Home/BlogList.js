@@ -7,26 +7,31 @@ const BlogList = ({ posts }) => {
 			<h2 className="text-2xl font-bold text-heading-light dark:text-heading-dark leading-tight mb-16 md:text-3xl lg:text-4xl md:pt-5 text-center">
 				Blog
 			</h2>
-			<div className="flex flex-col md:flex-row">
+			<div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 				{posts.map((item) => (
 					<div
 						key={item.slug}
-						className="w-full md:w-1/3 mb-12 md:mx-3 bg-white dark:bg-slate-800 shadow rounded-sm"
+						className="group bg-white dark:bg-slate-800 shadow rounded-sm relative"
 					>
-						<Link href={`/blogs/${item.slug}`}>
-							<img
-								src={`/images/articles/${item.frontmatter.bannerImage}`}
-								alt={item.frontmatter.title}
-								className="w-full rounded-t-sm h-52 object-cover"
-							/>
-						</Link>
+						<div className="h-52 overflow-hidden">
+							<Link href={`/blogs/${item.slug}`}>
+								<img
+									src={`/images/articles/${item.frontmatter.bannerImage}`}
+									alt={item.frontmatter.title}
+									className="group-hover:scale-110 w-full rounded-t-sm h-52 object-cover duration-200"
+								/>
+							</Link>
+						</div>
 						<div className="p-4">
 							<h3 className="text-lg font-bold text-heading-light dark:text-heading-dark mb-2">
-								<Link href={`/blogs/${item.slug}`}>
+								<Link
+									href={`/blogs/${item.slug}`}
+									className="after:content-[''] after:absolute after:inset-0"
+								>
 									{item.frontmatter.title}
 								</Link>
 							</h3>
-							<p className="text-sm">
+							<p className="text-sm line-clamp-3">
 								{item.frontmatter.description}
 							</p>
 						</div>

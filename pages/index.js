@@ -10,8 +10,8 @@ export default function Home({ posts }) {
 		<Layout>
 			<Header />
 			<Banner />
-			<Testimonials />
 			<BlogList posts={posts} />
+			<Testimonials />
 		</Layout>
 	);
 }

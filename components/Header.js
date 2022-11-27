@@ -53,9 +53,9 @@ const Header = () => {
 			<div className="h-16 hidden md:block"></div>
 			<header
 				className={clsx(
-					'group fixed z-20 inset-0 w-full bg-white/[0.85] dark:bg-slate-900/[0.85] flex-column border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0 md:top-0 md:right-0 md:bottom-auto',
+					'group fixed z-20 inset-0 w-full bg-white/[0.85] dark:bg-slate-900/[0.85] flex-column border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0 md:top-0 md:right-0 md:bottom-auto md:backdrop-blur',
 					showNav ? 'left-0' : '-left-full closed',
-					scrolled && 'md:backdrop-blur md:flex block',
+					scrolled && 'md:flex block',
 					!scrolled && !showNav && 'hidden md:flex',
 					showNav && 'backdrop-blur'
 				)}

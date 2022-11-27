@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import { testimonials } from '../../utils/data';
+import { Quote } from '../../utils/Icons';
 
 const Testimonials = () => {
 	const responsive = {
@@ -25,7 +26,7 @@ const Testimonials = () => {
 			<h2 className="text-2xl font-bold text-heading-light dark:text-heading-dark leading-tight mb-6 md:text-3xl lg:text-4xl md:pt-5">
 				Testimonials
 			</h2>
-			<p className="text-content-light dark:text-content-dark inline-block mb-12 lg:max-w-xl">
+			<p className="text-content-light dark:text-content-dark inline-block mb-8 lg:max-w-xl">
 				People I&apos;ve worked with have said some nice things...
 			</p>
 			<div className="text-left">
@@ -37,28 +38,31 @@ const Testimonials = () => {
 					itemClass="flex items-stretch"
 				>
 					{testimonials.map((item) => (
-						<div
-							className="mb-12 p-4 mx-3 bg-white dark:bg-slate-800 shadow rounded-sm"
-							key={item.id}
-						>
-							<div className="flex items-center mb-6 justify-start">
-								<div className="w-20 h-20 rounded-full overflow-hidden relative mr-5">
+						<div class="p-4 mb-8" key={item.id}>
+							<div class="h-full bg-white dark:bg-slate-800 shadow rounded-sm bg-opacity-40 p-8 rounded flex justify-center flex-col">
+								<Quote
+									classes="block text-gray-500 mb-4"
+									size={20}
+								/>
+								<p class="leading-relaxed mb-6 line-clamp-5">
+									{item.content}
+								</p>
+								<div class="inline-flex items-center">
 									<img
 										src={`/images/${item.image}`}
-										className="h-full w-full object-cover"
+										class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
 										alt={item.name}
 									/>
-								</div>
-								<div className="flex-1">
-									<h3 className="text-lg font-bold text-heading-light dark:text-heading-dark">
-										{item.name}
-									</h3>
-									<p className="text-sm">
-										{item.designation}
-									</p>
+									<div class="flex-grow flex flex-col pl-4">
+										<h3 class="title-font font-medium text-heading-light dark:text-heading-dark">
+											{item.name}
+										</h3>
+										<p class="text-sm">
+											{item.designation}
+										</p>
+									</div>
 								</div>
 							</div>
-							<p className="line-clamp-5">{item.content}</p>
 						</div>
 					))}
 				</Carousel>

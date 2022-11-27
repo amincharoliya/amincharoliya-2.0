@@ -13,6 +13,10 @@ li.react-multi-carousel-dot {
 	button {
 		background-color: transparent;
 		border-color: #ffb400;
+
+		&:focus {
+			outline: 1px solid;
+		}
 	}
 
 	&.react-multi-carousel-dot--active button {

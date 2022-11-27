@@ -14,7 +14,7 @@ const BlogList = ({ posts }) => {
 						className="group bg-white dark:bg-slate-800 shadow rounded-sm relative"
 					>
 						<div className="h-52 overflow-hidden">
-							<Link href={`/blogs/${item.slug}`}>
+							<Link href={`/blogs/${item.slug}`} tabIndex="-1">
 								<img
 									src={`/images/articles/${item.frontmatter.bannerImage}`}
 									alt={item.frontmatter.title}

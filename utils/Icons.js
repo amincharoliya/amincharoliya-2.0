@@ -1,4 +1,4 @@
-export function Moon({ size = 30 }) {
+export function Moon({ size = 30, classes = '' }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +8,7 @@ export function Moon({ size = 30 }) {
 			stroke="currentColor"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<path
 				strokeLinecap="round"
@@ -18,7 +19,7 @@ export function Moon({ size = 30 }) {
 	);
 }
 
-export function Sun({ size = 30 }) {
+export function Sun({ size = 30, classes = '' }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -28,6 +29,7 @@ export function Sun({ size = 30 }) {
 			stroke="currentColor"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<path
 				strokeLinecap="round"
@@ -38,7 +40,7 @@ export function Sun({ size = 30 }) {
 	);
 }
 
-export function Hamburger({ size = 30 }) {
+export function Hamburger({ size = 30, classes = '' }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -48,6 +50,7 @@ export function Hamburger({ size = 30 }) {
 			stroke="currentColor"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<path
 				strokeLinecap="round"
@@ -58,7 +61,7 @@ export function Hamburger({ size = 30 }) {
 	);
 }
 
-export function Xmark({ size = 30 }) {
+export function Xmark({ size = 30, classes = '' }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +71,7 @@ export function Xmark({ size = 30 }) {
 			stroke="currentColor"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<path
 				strokeLinecap="round"
@@ -78,7 +82,7 @@ export function Xmark({ size = 30 }) {
 	);
 }
 
-export function Home({ size = 30 }) {
+export function Home({ size = 30, classes = '' }) {
 	return (
 		<svg
 			viewBox="0 0 18 18"
@@ -86,6 +90,7 @@ export function Home({ size = 30 }) {
 			xmlns="http://www.w3.org/2000/svg"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<g clipPath="url(#clip0_2_6681)">
 				<path
@@ -102,7 +107,7 @@ export function Home({ size = 30 }) {
 	);
 }
 
-export function Work({ size = 30 }) {
+export function Work({ size = 30, classes = '' }) {
 	return (
 		<svg
 			viewBox="0 0 18 18"
@@ -110,6 +115,7 @@ export function Work({ size = 30 }) {
 			xmlns="http://www.w3.org/2000/svg"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<g clipPath="url(#clip0_2_6637)">
 				<path
@@ -126,7 +132,7 @@ export function Work({ size = 30 }) {
 	);
 }
 
-export function Code({ size = 30 }) {
+export function Code({ size = 30, classes = '' }) {
 	return (
 		<svg
 			viewBox="0 0 18 18"
@@ -134,6 +140,7 @@ export function Code({ size = 30 }) {
 			xmlns="http://www.w3.org/2000/svg"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<g clipPath="url(#clip0_2_6670)">
 				<path
@@ -155,7 +162,7 @@ export function Code({ size = 30 }) {
 	);
 }
 
-export function Pen({ size = 30 }) {
+export function Pen({ size = 30, classes = '' }) {
 	return (
 		<svg
 			viewBox="0 0 18 18"
@@ -163,6 +170,7 @@ export function Pen({ size = 30 }) {
 			xmlns="http://www.w3.org/2000/svg"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<g clipPath="url(#clip0_2_6624)">
 				<path
@@ -179,7 +187,7 @@ export function Pen({ size = 30 }) {
 	);
 }
 
-export function Contact({ size = 30 }) {
+export function Contact({ size = 30, classes = '' }) {
 	return (
 		<svg
 			viewBox="0 0 18 18"
@@ -187,6 +195,7 @@ export function Contact({ size = 30 }) {
 			xmlns="http://www.w3.org/2000/svg"
 			height={size}
 			width={size}
+			className={classes}
 		>
 			<g clipPath="url(#clip0_2_6602)">
 				<path

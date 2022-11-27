@@ -4,6 +4,7 @@ import Banner from '../components/Home/Banner';
 import Testimonials from '../components/Home/Testimonials';
 import BlogList from '../components/Home/BlogList';
 import { getAllPosts } from '../lib/blog/posts';
+import { testimonials } from '../utils/data';
 
 export default function Home({ posts }) {
 	return (
@@ -11,7 +12,7 @@ export default function Home({ posts }) {
 			<Header />
 			<Banner />
 			<BlogList posts={posts} />
-			<Testimonials />
+			<Testimonials testimonials={testimonials} />
 		</Layout>
 	);
 }
@@ -22,6 +23,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			posts,
+			testimonials,
 		},
 	};
 }

@@ -121,3 +121,26 @@ export const work = [
 		],
 	},
 ];
+
+export const projects = [
+	{
+		id: 1,
+		name: 'Quiz App',
+		description:
+			'Quiz app build with react JS. Data saved in localstorage to check quiz history.',
+		technologies: ['React', 'Styled Component', 'API'],
+		image: 'quiz-with-react.jpg',
+		link: 'https://quiz-with-reactjs.vercel.app/',
+		git: 'https://github.com/amincharoliya/quiz-app',
+	},
+	{
+		id: 2,
+		name: 'Book Store',
+		description:
+			'Book store a E-commerce website to browse and buy books, user section for order, profile update and buy history.',
+		technologies: ['Next JS', 'MongoDB', 'Next Auth', 'CURD'],
+		image: 'book-store.jpg',
+		link: 'https://quiz-with-reactjs.vercel.app/',
+		git: 'https://github.com/amincharoliya/book-store',
+	},
+];

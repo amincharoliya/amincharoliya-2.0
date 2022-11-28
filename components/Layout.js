@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+
+import Header from './Header';
+import Footer from './Footer';
 const ThemeSwitch = dynamic(() => import('./ThemeSwitch'), {
 	ssr: false,
 });
@@ -19,6 +22,7 @@ const Layout = ({ children, title }) => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<Header />
 			{children}
 			<div className="fixed bottom-10 right-10 md:hidden">
 				<ThemeSwitch
@@ -27,6 +31,7 @@ const Layout = ({ children, title }) => {
 					}
 				/>
 			</div>
+			<Footer />
 		</div>
 	);
 };

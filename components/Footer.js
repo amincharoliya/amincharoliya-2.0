@@ -7,9 +7,10 @@ const Footer = () => {
 			<div className="container">
 				<p className="text-center">
 					<Link
-						href="https://github.com/amincharoliya/amincharoliya-2.0"
-						target="_blank"
 						className="hover:text-theme duration-200"
+						href="https://github.com/amincharoliya/amincharoliya-2.0"
+						rel="noopener noreferrer"
+						target="_blank"
 					>
 						Built by Amin Charoliya
 					</Link>

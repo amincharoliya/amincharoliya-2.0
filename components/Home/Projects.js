@@ -44,6 +44,9 @@ const Projects = () => {
 								<Link
 									href={item.link}
 									className="mr-4 focus:outline-0 focus:text-theme"
+									aria-label="External Link"
+									rel="noopener noreferrer"
+									target="_blank"
 								>
 									<LinkIcon
 										classes="inline-block hover:scale-110 duration-200 hover:text-theme"
@@ -53,6 +56,9 @@ const Projects = () => {
 								<Link
 									href={item.git}
 									className="mr-4 focus:outline-0 focus:text-theme"
+									aria-label="GitHub Link"
+									rel="noopener noreferrer"
+									target="_blank"
 								>
 									<CodeIcon
 										classes="inline-block hover:scale-110 duration-200 hover:text-theme"

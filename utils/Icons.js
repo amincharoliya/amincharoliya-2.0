@@ -268,3 +268,63 @@ export function CodeIcon({ size = 30, classes = '' }) {
 		</svg>
 	);
 }
+
+export function Mail({ size = 30, classes = '' }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			viewBox="0 0 20 20"
+			className={classes}
+			height={size}
+			width={size}
+		>
+			<path
+				fill-rule="evenodd"
+				d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z"
+				clip-rule="evenodd"
+			></path>
+		</svg>
+	);
+}
+
+export function Twitter({ size = 30, classes = '' }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			version="1.2"
+			baseProfile="tiny"
+			viewBox="0 0 24 24"
+			className={classes}
+			height={size}
+			width={size}
+		>
+			<path d="M18.89 7.012c.808-.496 1.343-1.173 1.605-2.034-.786.417-1.569.703-2.351.861-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078-.715.717-1.076 1.588-1.076 2.605 0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388.549.676 1.254 1.107 2.115 1.291-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841.625.472 1.344.721 2.152.743-1.332 1.045-2.855 1.562-4.578 1.562-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974.784-1.564 1.172-3.192 1.172-4.892v-.468c.758-.57 1.371-1.212 1.84-1.921-.68.293-1.383.492-2.11.593z"></path>
+		</svg>
+	);
+}
+
+export function LinkedIn({ size = 30, classes = '' }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			stroke="currentColor"
+			fill="currentColor"
+			stroke-width="0"
+			version="1.2"
+			baseProfile="tiny"
+			viewBox="0 0 24 24"
+			className={classes}
+			height={size}
+			width={size}
+		>
+			<path d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"></path>
+			<ellipse cx="6.5" cy="6.5" rx="1.55" ry="1.5"></ellipse>
+		</svg>
+	);
+}

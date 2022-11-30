@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { projects } from '../../utils/data';
 import { CodeIcon, LinkIcon } from '../../utils/Icons';
 
 /* eslint-disable @next/next/no-img-element */
-const Projects = () => {
+const Projects = ({ projects }) => {
 	return (
 		<section className="lg:container px-5 py-14">
 			<h2 className="text-2xl font-bold text-heading-light dark:text-heading-dark leading-tight mb-12 md:text-3xl lg:text-4xl md:pt-5 text-center">
@@ -16,9 +15,9 @@ const Projects = () => {
 						key={item.id}
 					>
 						<div className="group">
-							<div className="h-72 relative overflow-hidden">
+							<div className="h-64 relative overflow-hidden">
 								<img
-									className="object-cover object-center rounded-t-sm w-full absolute top-0 group-hover:-top-full transition-all duration-1000"
+									className="object-cover object-center rounded-t-sm w-full"
 									alt="hero"
 									src={`/images/${item.image}`}
 								/>

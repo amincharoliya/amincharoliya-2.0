@@ -3,7 +3,7 @@ import { LinkedIn, Mail, Twitter } from '../utils/Icons';
 
 const Contact = () => {
 	return (
-		<section className="lg:container px-5 py-14">
+		<section className="lg:container px-5 py-14" id="contact">
 			<h2 className="text-2xl font-bold text-heading-light dark:text-heading-dark leading-tight mb-6 md:text-3xl lg:text-4xl md:pt-5 text-center">
 				Contact Me
 			</h2>

@@ -21,7 +21,10 @@ const Testimonials = ({ testimonials }) => {
 	};
 
 	return (
-		<section className="lg:container px-5 py-14 text-center">
+		<section
+			className="lg:container px-5 py-14 text-center"
+			id="testimonials"
+		>
 			<h2 className="text-2xl font-bold text-heading-light dark:text-heading-dark leading-tight mb-6 md:text-3xl lg:text-4xl md:pt-5">
 				Testimonials
 			</h2>

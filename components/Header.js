@@ -50,7 +50,7 @@ const Header = () => {
 
 	return (
 		<>
-			<div className="h-16 hidden md:block"></div>
+			<div className="h-16 hidden md:block" id="header"></div>
 			<header
 				className={clsx(
 					'group fixed z-20 inset-0 w-full bg-white/[0.85] dark:bg-slate-900/[0.85] flex-column border-r border-slate-900/10 md:border-r-0 md:border-b md:border-slate-900/10 dark:border-slate-50/[0.06] duration-200 md:left-0 md:top-0 md:right-0 md:bottom-auto md:backdrop-blur',
@@ -66,7 +66,8 @@ const Header = () => {
 						<ul className="flex flex-col md:flex-row md:justify-center w-full">
 							<li>
 								<Link
-									href="#"
+									href="#header"
+									scrol={false}
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
 									<span className="ml-3">Home</span>
@@ -74,23 +75,7 @@ const Header = () => {
 							</li>
 							<li>
 								<Link
-									href="#"
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-								>
-									<span className="ml-3">Work</span>
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#"
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-								>
-									<span className="ml-3">Profolio</span>
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#"
+									href="#blog"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
 									<span className="ml-3">Blog</span>
@@ -98,7 +83,32 @@ const Header = () => {
 							</li>
 							<li>
 								<Link
-									href="#"
+									href="#testimonials"
+									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+								>
+									<span className="ml-3">Testimonials</span>
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="#work"
+									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+								>
+									<span className="ml-3">Work</span>
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="#projects"
+									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+								>
+									<span className="ml-3">Projects</span>
+								</Link>
+							</li>
+
+							<li>
+								<Link
+									href="#contact"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
 									<span className="ml-3">Contact</span>

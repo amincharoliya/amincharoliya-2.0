@@ -69,7 +69,6 @@ const Header = () => {
 									href="#"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
-									<Home size={25} />
 									<span className="ml-3">Home</span>
 								</Link>
 							</li>
@@ -78,7 +77,6 @@ const Header = () => {
 									href="#"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
-									<Work size={25} />
 									<span className="ml-3">Work</span>
 								</Link>
 							</li>
@@ -87,7 +85,6 @@ const Header = () => {
 									href="#"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
-									<Code size={24} />
 									<span className="ml-3">Profolio</span>
 								</Link>
 							</li>
@@ -96,7 +93,6 @@ const Header = () => {
 									href="#"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
-									<Pen size={25} />
 									<span className="ml-3">Blog</span>
 								</Link>
 							</li>
@@ -105,7 +101,6 @@ const Header = () => {
 									href="#"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
-									<Contact size={25} />
 									<span className="ml-3">Contact</span>
 								</Link>
 							</li>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LinkedIn, Mail, Twitter } from '../../utils/Icons';
+import { LinkedIn, Mail, Twitter } from '../utils/Icons';
 
 const Contact = () => {
 	return (

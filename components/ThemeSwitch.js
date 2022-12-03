@@ -15,15 +15,15 @@ const ThemeSwitch = ({ classes }) => {
 		setAnimation(true);
 		setTimeout(() => {
 			setAnimation(false);
-		}, 300);
+		}, 500);
 	};
 
 	return (
 		<button className={classes} onClick={() => ToggleTheme()}>
 			{theme == 'dark' ? (
-				<Moon classes={clsx(animation && 'animate-ping')} />
+				<Moon classes={clsx(animation && 'animate-wiggle')} />
 			) : (
-				<Sun classes={clsx(animation && 'animate-ping')} />
+				<Sun classes={clsx(animation && 'animate-wiggle')} />
 			)}
 		</button>
 	);

@@ -15,9 +15,9 @@ const Projects = ({ projects }) => {
 						key={item.id}
 					>
 						<div className="group">
-							<div className="h-64 relative overflow-hidden">
+							<div className="h-32 sm:h-64 relative overflow-hidden">
 								<img
-									className="object-cover object-center rounded-t-sm w-full"
+									className="object-top object-cover rounded-t-sm w-full h-full"
 									alt="hero"
 									src={`/images/${item.image}`}
 								/>
@@ -30,11 +30,11 @@ const Projects = ({ projects }) => {
 								<p className="mb-4 leading-relaxed">
 									{item.description}
 								</p>
-								<p className="mb-6">
+								<p className="mb-4">
 									{item.technologies.map((item) => (
 										<span
 											key={item}
-											className="text-sm px-3 py-1 border border-content-light/50 dark:border-content-dark/50 inline-block rounded-full mr-3"
+											className="text-sm px-3 py-1 mb-2 border border-content-light/50 dark:border-content-dark/50 inline-block rounded-full mr-3"
 										>
 											{item}
 										</span>

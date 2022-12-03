@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Link as ScrollLink, Events } from 'react-scroll';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
@@ -48,6 +49,8 @@ const Header = () => {
 		setShowNav(!showNav);
 	};
 
+	Events.scrollEvent.register('begin', () => setShowNav(!showNav));
+
 	return (
 		<>
 			<div className="h-16 hidden md:block" id="header"></div>
@@ -77,45 +80,75 @@ const Header = () => {
 								</Link>
 							</li>
 							<li>
-								<Link
+								<ScrollLink
 									href="#blog"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+									activeClass="text-theme dark:text-theme"
+									to="blog"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
 								>
 									<span className="ml-3">Blog</span>
-								</Link>
+								</ScrollLink>
 							</li>
 							<li>
-								<Link
+								<ScrollLink
 									href="#testimonials"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+									activeClass="text-theme dark:text-theme"
+									to="testimonials"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
 								>
 									<span className="ml-3">Testimonials</span>
-								</Link>
+								</ScrollLink>
 							</li>
 							<li>
-								<Link
+								<ScrollLink
 									href="#work"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+									activeClass="text-theme dark:text-theme"
+									to="work"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
 								>
 									<span className="ml-3">Work</span>
-								</Link>
+								</ScrollLink>
 							</li>
 							<li>
-								<Link
+								<ScrollLink
 									href="#projects"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+									activeClass="text-theme dark:text-theme"
+									to="projects"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
 								>
 									<span className="ml-3">Projects</span>
-								</Link>
+								</ScrollLink>
 							</li>
 
 							<li>
-								<Link
+								<ScrollLink
 									href="#contact"
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+									activeClass="text-theme dark:text-theme"
+									to="contact"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
 								>
 									<span className="ml-3">Contact</span>
-								</Link>
+								</ScrollLink>
 							</li>
 						</ul>
 					</nav>

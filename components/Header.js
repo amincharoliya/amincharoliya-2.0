@@ -62,8 +62,11 @@ const Header = () => {
 				ref={header}
 			>
 				<div className="lg:container w-full px-5 pt-5 md:pt-0 flex md:justify-center md:items-center">
-					<nav role="Main Navigation" className="md:ml-auto w-full">
-						<ul className="flex flex-col md:flex-row md:justify-center w-full">
+					<nav
+						role="Main Navigation"
+						className="w-full h-screen md:h-auto md:ml-auto "
+					>
+						<ul className="flex flex-col h-screen overflow-auto md:h-auto md:flex-row md:justify-center w-full">
 							<li>
 								<Link
 									href="#header"

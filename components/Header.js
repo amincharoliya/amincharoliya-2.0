@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -16,7 +17,9 @@ import {
 const ThemeSwitch = dynamic(() => import('./ThemeSwitch'), {
 	ssr: false,
 });
+
 const Header = () => {
+	const router = useRouter();
 	const [showNav, setShowNav] = useState(false);
 	const [scrolled, setScrolled] = useState(true);
 	const header = useRef(null);
@@ -51,6 +54,8 @@ const Header = () => {
 
 	Events.scrollEvent.register('begin', () => setShowNav(!showNav));
 
+	const homeLink = ['Blog', 'Testimonials', 'Work', 'Projects', 'Contact'];
+
 	return (
 		<>
 			<div className="h-16 hidden md:block" id="header"></div>
@@ -70,86 +75,60 @@ const Header = () => {
 						className="w-full h-screen md:h-auto md:ml-auto "
 					>
 						<ul className="flex flex-col h-screen overflow-auto md:h-auto md:flex-row md:justify-center w-full">
-							<li>
-								<Link
-									href="#header"
-									scroll={false}
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-								>
-									<span className="ml-3">Home</span>
-								</Link>
-							</li>
-							<li>
-								<ScrollLink
-									href="#blog"
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-									activeClass="text-theme dark:text-theme"
-									to="blog"
-									spy={true}
-									smooth={true}
-									offset={0}
-									duration={500}
-								>
-									<span className="ml-3">Blog</span>
-								</ScrollLink>
-							</li>
-							<li>
-								<ScrollLink
-									href="#testimonials"
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-									activeClass="text-theme dark:text-theme"
-									to="testimonials"
-									spy={true}
-									smooth={true}
-									offset={0}
-									duration={500}
-								>
-									<span className="ml-3">Testimonials</span>
-								</ScrollLink>
-							</li>
-							<li>
-								<ScrollLink
-									href="#work"
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-									activeClass="text-theme dark:text-theme"
-									to="work"
-									spy={true}
-									smooth={true}
-									offset={0}
-									duration={500}
-								>
-									<span className="ml-3">Work</span>
-								</ScrollLink>
-							</li>
-							<li>
-								<ScrollLink
-									href="#projects"
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-									activeClass="text-theme dark:text-theme"
-									to="projects"
-									spy={true}
-									smooth={true}
-									offset={0}
-									duration={500}
-								>
-									<span className="ml-3">Projects</span>
-								</ScrollLink>
-							</li>
-
-							<li>
-								<ScrollLink
-									href="#contact"
-									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
-									activeClass="text-theme dark:text-theme"
-									to="contact"
-									spy={true}
-									smooth={true}
-									offset={0}
-									duration={500}
-								>
-									<span className="ml-3">Contact</span>
-								</ScrollLink>
-							</li>
+							{router.pathname == '/' ? (
+								<li>
+									<ScrollLink
+										href="#header"
+										className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+										activeClass="text-theme dark:text-theme"
+										to="header"
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={500}
+									>
+										<span className="ml-3">Home</span>
+									</ScrollLink>
+								</li>
+							) : (
+								<>
+									<li>
+										<Link
+											href="/"
+											scroll={false}
+											className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+										>
+											<span className="ml-3">Home</span>
+										</Link>
+									</li>
+									<li>
+										<Link
+											href="/blog"
+											scroll={false}
+											className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+										>
+											<span className="ml-3">Blog</span>
+										</Link>
+									</li>
+								</>
+							)}
+							{router.pathname == '/' &&
+								homeLink.map((item) => (
+									<li key={item}>
+										<ScrollLink
+											href={`#${item.toLocaleLowerCase()}`}
+											className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
+											activeClass="text-theme dark:text-theme"
+											to={item.toLocaleLowerCase()}
+											spy={true}
+											smooth={true}
+											offset={0}
+											duration={500}
+										>
+											<span className="ml-3">{item}</span>
+										</ScrollLink>
+									</li>
+								))}
 						</ul>
 					</nav>
 					<div className="hidden md:block ml-auto">

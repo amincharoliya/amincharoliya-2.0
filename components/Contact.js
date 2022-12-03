@@ -7,7 +7,7 @@ const Contact = () => {
 			<h2 className="text-2xl font-bold text-heading-light dark:text-heading-dark leading-tight mb-6 md:text-3xl lg:text-4xl md:pt-5 text-center">
 				Contact Me
 			</h2>
-			<p class="text-content-light dark:text-content-dark block mb-8 text-center">
+			<p className="text-content-light dark:text-content-dark block mb-8 text-center">
 				Get in touch with me or just say Hi...
 			</p>
 			<p className="flex justify-center items-center">

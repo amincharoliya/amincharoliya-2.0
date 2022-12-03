@@ -70,7 +70,7 @@ const Header = () => {
 							<li>
 								<Link
 									href="#header"
-									scrol={false}
+									scroll={false}
 									className="py-4 p-5 md:px-2 md:mx-3 inline-block text-lg dark:text-white hover:text-theme dark:hover:text-theme outline-theme flex"
 								>
 									<span className="ml-3">Home</span>

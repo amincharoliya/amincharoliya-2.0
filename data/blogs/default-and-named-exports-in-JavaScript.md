@@ -10,8 +10,6 @@ tags:
     - javascript
 ---
 
-# default and named exports in JavaScript
-
 Let's see how we can export function in defferent ways ans discuss when we can use certain export.
 
 Code example:

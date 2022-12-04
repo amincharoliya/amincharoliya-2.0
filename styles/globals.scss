@@ -32,11 +32,6 @@ li.react-multi-carousel-dot {
 @for $i from 1 through 30 {
 	@keyframes particle-animation-#{$i} {
 		100% {
-			// transform: translate3d(
-			// 	(random(90) * 1%),
-			// 	(random(90) * 1%),
-			// 	(random(100) * 1px)
-			// );
 			left: random(90) * 1%;
 			top: random(90) * 1%;
 		}
@@ -49,14 +44,86 @@ li.react-multi-carousel-dot {
 		height: $size;
 		width: $size;
 		animation-delay: -$i * 0.2s;
-		// transform: translate3d(
-		// 	(random(90) * 1%),
-		// 	(random(90) * 1%),
-		// 	(random(100) * 1px)
-		// );
 		left: random(90) * 1%;
 		top: random(90) * 1%;
 		background: hsl(random(360), 70%, 50%);
 		transition: all 0.3s ease;
+	}
+}
+
+/*Article*/
+@layer components {
+	.article-content {
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@apply mb-4 font-bold;
+		}
+
+		h2 {
+			@apply text-2xl;
+		}
+
+		h3 {
+			@apply text-xl;
+		}
+
+		h4 {
+			@apply text-lg;
+		}
+
+		h5,
+		h6 {
+			@apply text-base;
+		}
+
+		p {
+			@apply mb-6;
+		}
+
+		ul,
+		ol {
+			@apply mb-4 list-disc list-inside;
+
+			li {
+				@apply mb-2;
+			}
+		}
+
+		ol {
+			@apply list-decimal;
+		}
+
+		:not(pre) > code {
+			@apply px-2 py-1 mx-2 bg-gray-100 dark:bg-slate-800 rounded-sm;
+		}
+
+		blockquote {
+			@apply px-4 py-12 mb-6 bg-gray-100 dark:bg-slate-800 rounded-md relative;
+
+			&:before {
+				content: '\201C';
+				@apply text-6xl absolute left-4 top-3;
+			}
+
+			&:after {
+				content: '\201D';
+				@apply text-6xl absolute right-4 -bottom-4;
+			}
+
+			p {
+				@apply mb-0;
+			}
+		}
+
+		hr {
+			@apply mb-4;
+		}
+
+		a {
+			@apply text-theme;
+		}
 	}
 }

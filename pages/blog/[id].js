@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
+import Link from 'next/link';
 
 import Header from '../../components/Header';
 
@@ -12,31 +13,62 @@ export default function Post({ postData, paths }) {
 	const id = router.query.id;
 	return (
 		<Layout>
-			<header className="relative h-72 w-full after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/[0.5] after:to-black/[0.3]">
-				<Image
-					src={`/images/articles/${postData.bannerImage}`}
-					fill
-					alt={postData.title}
-					style={{ objectFit: 'cover' }}
-				/>
-				<div className="max-w-screen-lg mx-auto px-5 py-14 h-72 flex items-center text-white relative z-10">
-					<h1 className="text-2xl font-bold relative sm:text-3xl md:text-4xl">
-						{postData.title}
-					</h1>
+			<header>
+				<div className="relative h-52 sm:h-72 w-full after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/[0.5] after:to-black/[0.3]">
+					<Image
+						src={`/images/articles/${postData.bannerImage}`}
+						fill
+						alt={postData.title}
+						style={{ objectFit: 'cover' }}
+						priority={true}
+					/>
+					<div className="max-w-screen-lg mx-auto px-5 py-14 h-52 sm:h-72 flex items-center text-white relative z-10">
+						<h1 className="text-2xl font-bold relative sm:text-3xl md:text-4xl">
+							{postData.title}
+						</h1>
+					</div>
 				</div>
-			</header>
-			<div className="bg-white dark:bg-slate-900">
-				<div className="max-w-screen-lg mx-auto px-5 py-14">
-					<div className="flex flex-col items-center">
-						<div className="max-w-7xl w-full">
-							<div
-								className="article-content"
-								dangerouslySetInnerHTML={{
-									__html: postData.contentHtml,
-								}}
+				<div className="mt-10 px-5 flex flex-col sm:flex-row sm:justify-between sm:items-center max-w-screen-lg mx-auto">
+					<div className="flex sm:justify-center items-center mb-6 sm:mb-0">
+						<div className="h-16 w-16 relative rounded-full overflow-hidden mr-6">
+							<Image
+								src={`/images/${postData.authorImage}`}
+								fill
+								alt={postData.author}
+								style={{ objectFit: 'cover' }}
+								priority={true}
 							/>
 						</div>
+						<div className="flex flex-col">
+							<span>{postData.author}</span>
+							<span>
+								<span className="sr-only">Published on </span>
+								{postData.date}
+							</span>
+						</div>
 					</div>
+					<ul className="flex mb-0">
+						<li>Tags:</li>
+						{postData.tags?.map((tag) => (
+							<li key={tag} className="list-none ml-2">
+								<Link
+									href={`/blog?tags=${tag}`}
+									className="hover:text-theme duration-200"
+								>
+									{tag}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+			</header>
+			<div className="article-content">
+				<div className="max-w-screen-lg mx-auto px-5 py-10">
+					<div
+						dangerouslySetInnerHTML={{
+							__html: postData.contentHtml,
+						}}
+					/>
 				</div>
 			</div>
 		</Layout>

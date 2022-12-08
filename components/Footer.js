@@ -3,7 +3,7 @@ import Contact from './Contact';
 
 const Footer = () => {
 	return (
-		<>
+		<div className="page_bottom">
 			<Contact />
 			<footer className="py-5 bg-white dark:bg-slate-800 shadow">
 				<div className="container">
@@ -19,7 +19,7 @@ const Footer = () => {
 					</p>
 				</div>
 			</footer>
-		</>
+		</div>
 	);
 };
 

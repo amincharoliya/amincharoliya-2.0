@@ -23,14 +23,16 @@ const Layout = ({ children, title }) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />
-			{children}
-			<div className="fixed bottom-10 right-10 md:hidden">
-				<ThemeSwitch
-					classes={
-						'bg-theme text-content-dark dark:text-content-light rounded-sm p-2 opacity-90'
-					}
-				/>
-			</div>
+			<main>
+				{children}
+				<div className="fixed bottom-10 right-10 md:hidden">
+					<ThemeSwitch
+						classes={
+							'bg-theme text-content-dark dark:text-content-light rounded-sm p-2 opacity-90'
+						}
+					/>
+				</div>
+			</main>
 			<Footer />
 		</div>
 	);

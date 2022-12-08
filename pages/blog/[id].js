@@ -28,41 +28,45 @@ export default function Post({ postData, paths }) {
 						</h1>
 					</div>
 				</div>
-				<div className="mt-10 px-5 flex flex-col sm:flex-row sm:justify-between sm:items-center max-w-screen-lg mx-auto">
-					<div className="flex sm:justify-center items-center mb-6 sm:mb-0">
-						<div className="h-16 w-16 relative rounded-full overflow-hidden mr-6">
-							<Image
-								src={`/images/${postData.authorImage}`}
-								fill
-								alt={postData.author}
-								style={{ objectFit: 'cover' }}
-								priority={true}
-							/>
+				<div className="bg-white dark:bg-slate-900">
+					<div className="pt-10 px-5 flex flex-col sm:flex-row sm:justify-between sm:items-center max-w-screen-lg mx-auto">
+						<div className="flex sm:justify-center items-center mb-6 sm:mb-0">
+							<div className="h-16 w-16 relative rounded-full overflow-hidden mr-6">
+								<Image
+									src={`/images/${postData.authorImage}`}
+									fill
+									alt={postData.author}
+									style={{ objectFit: 'cover' }}
+									priority={true}
+								/>
+							</div>
+							<div className="flex flex-col">
+								<span>{postData.author}</span>
+								<span>
+									<span className="sr-only">
+										Published on{' '}
+									</span>
+									{postData.date}
+								</span>
+							</div>
 						</div>
-						<div className="flex flex-col">
-							<span>{postData.author}</span>
-							<span>
-								<span className="sr-only">Published on </span>
-								{postData.date}
-							</span>
-						</div>
+						<ul className="flex mb-0">
+							<li>Tags:</li>
+							{postData.tags?.map((tag) => (
+								<li key={tag} className="list-none ml-2">
+									<Link
+										href={`/blog?tags=${tag}`}
+										className="hover:text-theme duration-200"
+									>
+										{tag}
+									</Link>
+								</li>
+							))}
+						</ul>
 					</div>
-					<ul className="flex mb-0">
-						<li>Tags:</li>
-						{postData.tags?.map((tag) => (
-							<li key={tag} className="list-none ml-2">
-								<Link
-									href={`/blog?tags=${tag}`}
-									className="hover:text-theme duration-200"
-								>
-									{tag}
-								</Link>
-							</li>
-						))}
-					</ul>
 				</div>
 			</header>
-			<div className="article-content">
+			<div className="article-content bg-white dark:bg-slate-900">
 				<div className="max-w-screen-lg mx-auto px-5 py-10">
 					<div
 						dangerouslySetInnerHTML={{

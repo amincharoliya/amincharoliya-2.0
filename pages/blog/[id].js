@@ -51,9 +51,9 @@ export default function Post({ postData, paths }) {
 							</div>
 						</div>
 						<ul className="flex mb-0">
-							<li>Tags:</li>
+							<li className="font-medium">Tags:</li>
 							{postData.tags?.map((tag) => (
-								<li key={tag} className="list-none ml-2">
+								<li key={tag} className=" ml-2">
 									<Link
 										href={`/blog?tags=${tag}`}
 										className="hover:text-theme duration-200"

@@ -1,7 +1,7 @@
 ---
 title: Auto-fix and format your JavaScript with ESLint
 description: When it comes to analyzing JavaScript program errors, ESLint is one of the best linting tools available.
-date: 26-11-2022
+date: Nov 11, 2022
 author: 'Amin Charoliya'
 authorImage: 'amin-thumb.jpg'
 category: 'javascript'

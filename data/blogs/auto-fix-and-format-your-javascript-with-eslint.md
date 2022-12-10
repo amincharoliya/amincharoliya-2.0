@@ -17,11 +17,22 @@ _One of my favorite_ features is the ability to auto-fix using the --fix flag. I
 
 ---
 
-    const App = () => {
-        return (
-            <h1>Hello World.</h1>
-        )
-    }
+```js[class="line-numbers"]
+const App = ( hello ) => {
+	return <h1>Hello World.</h1>;
+    // add your code
+};
+```
+
+```css[class="line-numbers"]
+body {
+    font-size: 10px !important;
+}
+
+html.hello[attr="value] {
+    padding: 10px
+}
+```
 
 I like to do this cleanup right away whenever I save a file in my editor `js`. It provides a quick feedback loop and persists the fixed changes to disk. In this article, I am going to show you how to do that as well for some popular editors.
 
@@ -47,3 +58,7 @@ You can install ESLint locally for a given project (inside node_modules) or glob
 ## VS Code
 
 For VS Code, install the ESLint package. Then, to format on save, go to global settings and search for ESLint and turn on the ESLint: Auto Fix On Save option.
+
+```
+
+```

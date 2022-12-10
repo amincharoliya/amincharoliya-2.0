@@ -144,3 +144,5 @@ export const projects = [
 		git: 'https://github.com/amincharoliya/book-store',
 	},
 ];
+
+export const siteURL = 'https://amincharoliya.com';

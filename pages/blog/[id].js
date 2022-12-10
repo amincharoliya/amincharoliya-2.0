@@ -12,7 +12,11 @@ export default function Post({ postData, paths }) {
 	const router = useRouter();
 	const id = router.query.id;
 	return (
-		<Layout>
+		<Layout
+			title={postData.title}
+			description={postData.description}
+			ogImage={`/images/articles/${postData.bannerImage}`}
+		>
 			<header>
 				<div className="relative h-52 sm:h-72 w-full after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/[0.5] after:to-black/[0.3]">
 					<Image

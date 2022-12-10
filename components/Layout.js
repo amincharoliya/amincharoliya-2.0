@@ -7,7 +7,7 @@ const ThemeSwitch = dynamic(() => import('./ThemeSwitch'), {
 	ssr: false,
 });
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, description, ogImage }) => {
 	return (
 		<div className="min-h-screen font-inter bg-gray-100 dark:bg-slate-900 text-content-light dark:text-content-dark ">
 			<Head>
@@ -18,9 +18,33 @@ const Layout = ({ children, title }) => {
 				</title>
 				<meta
 					name="description"
-					content="Amin Charoliya is a Front End Developer who is skilled in HTML, CSS, JavaScript, React js, Next js and WordPress."
+					content={
+						description
+							? `${description}`
+							: 'Amin Charoliya is a Front End Developer who is skilled in HTML, CSS, JavaScript, React js, Next js and WordPress.'
+					}
 				/>
-				<link rel="icon" href="/favicon.ico" />
+				<meta
+					property="og:title"
+					content={
+						title
+							? `${title} | Amin Charoliya`
+							: 'Amin Charoliya | Front End Developer based in India'
+					}
+				/>
+				<meta
+					property="og:description"
+					content={
+						description
+							? `${description}`
+							: 'Amin Charoliya is a Front End Developer who is skilled in HTML, CSS, JavaScript, React js, Next js and WordPress.'
+					}
+				/>
+				<meta
+					property="og:image"
+					content={ogImage ? `${ogImage}` : '/images/amin.jpg'}
+				/>
+				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
 			<Header />
 			<main>

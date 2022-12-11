@@ -33,7 +33,7 @@ const Blog = ({ posts }) => {
 				{tags && (
 					<button
 						onClick={handleClearTags}
-						className="inline-block text-theme border border-theme mb-6 hover:bg-theme hover:text-content-dark focus:border-transparent dark:focus:border-transparent focus:outline-none focus:ring-2 focus:ring-theme font-medium rounded-lg text-sm px-4 py-2 text-center duration-200"
+						className="inline-block text-content-light dark:text-content-dark border border-content-light dark:border-content-dark mb-6 font-medium rounded-lg text-sm px-4 py-2 text-center duration-200"
 					>
 						Clear Filter <XMark classes="inline-block" size={20} />
 					</button>

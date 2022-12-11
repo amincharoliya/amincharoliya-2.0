@@ -59,24 +59,24 @@ li.react-multi-carousel-dot {
 		h4,
 		h5,
 		h6 {
-			@apply mb-4 font-bold;
+			@apply mb-8 font-bold;
 		}
 
 		h2 {
-			@apply text-2xl;
+			@apply text-3xl;
 		}
 
 		h3 {
-			@apply text-xl;
+			@apply text-2xl;
 		}
 
 		h4 {
-			@apply text-lg;
+			@apply text-xl;
 		}
 
 		h5,
 		h6 {
-			@apply text-base;
+			@apply text-lg;
 		}
 
 		p {
@@ -97,7 +97,7 @@ li.react-multi-carousel-dot {
 		}
 
 		:not(pre) > code {
-			@apply px-2 py-1 mx-2 bg-gray-100 dark:bg-slate-800 rounded-sm;
+			@apply px-2 pt-0.5 pb-1 mx-1 bg-gray-100 dark:bg-slate-800 rounded-sm;
 		}
 
 		blockquote {

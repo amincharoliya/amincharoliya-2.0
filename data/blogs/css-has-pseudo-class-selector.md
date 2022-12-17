@@ -1,6 +1,6 @@
 ---
 title: CSS :has() pseudo-class selector
-description: The :has() selector is a CSS pseudo-class that allows a developer to apply styles to an element based on whether it contains another element or not.
+description: The :has() selector is a CSS pseudo-class that allows a developer to apply styles to an element based on whether it contains another element or not
 date: Nov 26, 2022
 author: 'Amin Charoliya'
 authorImage: 'amin-thumb.jpg'
@@ -48,7 +48,7 @@ By chaining together multiple `:has()` selectors, the selector will match only i
 
 This allows for complex, dynamic styles that can adapt to the structure of the HTML. It can be a powerful tool for creating flexible, maintainable styles in your web applications.
 
-```css[class="linenumbers"]
+```css[class="line-numbers"]
 article:has(video, audio) {
   /* if the article contains audio or video */
 }

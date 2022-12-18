@@ -140,7 +140,7 @@ export const projects = [
 			'Book store a E-commerce website to browse and buy books, user section for order, profile update and buy history.',
 		technologies: ['Next JS', 'MongoDB', 'Next Auth', 'CURD'],
 		image: 'book-store.png',
-		link: 'https://quiz-with-reactjs.vercel.app/',
+		link: 'https://next-mongo-book-store.vercel.app/',
 		git: 'https://github.com/amincharoliya/book-store',
 	},
 ];

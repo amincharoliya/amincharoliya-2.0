@@ -59,7 +59,7 @@ const Layout = ({ children, title, description, ogImage }) => {
 					content={
 						ogImage
 							? siteURL + ogImage
-							: `${pageURL}images/amincharoliya_preview.png`
+							: `${siteURL}/images/amincharoliya_preview.png`
 					}
 				/>
 				{/* Twitter */}
@@ -86,7 +86,7 @@ const Layout = ({ children, title, description, ogImage }) => {
 					content={
 						ogImage
 							? siteURL + ogImage
-							: `${pageURL}images/amincharoliya_preview.png`
+							: `${siteURL}/images/amincharoliya_preview.png`
 					}
 				/>
 				<link rel="icon" type="image/png" href="/favicon.png" />

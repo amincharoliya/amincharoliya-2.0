@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 import { useRouter } from 'next/router';
 
 import Header from './Header';
@@ -90,6 +91,19 @@ const Layout = ({ children, title, description, ogImage }) => {
 				/>
 				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
+			{/* Global site tag (gtag.js) - Google Analytics */}
+			<Script
+				async
+				src="https://www.googletagmanager.com/gtag/js?id=UA-47736244-1"
+				strategy="afterInteractive"
+			/>
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || []; function gtag()
+					{dataLayer.push(arguments)}
+					gtag('js', new Date()); gtag('config', 'UA-47736244-1');
+				`}
+			</Script>
 			<Header />
 			<main>
 				{children}

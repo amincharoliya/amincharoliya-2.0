@@ -16,7 +16,7 @@ const Contact = () => {
 					rel="noopener noreferrer"
 					target="_blank"
 					className="focus:outline-0 focus:text-theme mx-2"
-					title="E-Mail"
+					title="Linked In"
 				>
 					<LinkedIn classes="hover:scale-110 duration-200 hover:text-theme" />
 				</Link>
@@ -25,7 +25,7 @@ const Contact = () => {
 					rel="noopener noreferrer"
 					target="_blank"
 					className="focus:outline-0 focus:text-theme mx-2"
-					title="E-Mail"
+					title="Twitter"
 				>
 					<Twitter classes="hover:scale-110 duration-200 hover:text-theme" />
 				</Link>

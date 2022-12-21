@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { motion, useScroll, useSpring } from 'framer-motion';
 
 import { getAllPostIds, getPostData } from '../../lib/blog/posts';
 import Image from 'next/image';
@@ -10,22 +9,12 @@ export default function Post({ postData, paths }) {
 	const pages = paths.map((item) => item.params.id);
 	const router = useRouter();
 	const id = router.query.id;
-	const { scrollYProgress } = useScroll();
-	const scaleX = useSpring(scrollYProgress, {
-		stiffness: 100,
-		damping: 30,
-		restDelta: 0.001,
-	});
 	return (
 		<Layout
 			title={postData.title}
 			description={postData.description}
 			ogImage={`/images/articles/${postData.bannerImage}`}
 		>
-			<motion.div
-				className="fixed origin-left top-16 left-0 w-full h-0.5 bg-theme z-10"
-				style={{ scaleX }}
-			/>
 			<header>
 				<div className="relative h-52 sm:h-72 w-full after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/[0.5] after:to-black/[0.3]">
 					<Image

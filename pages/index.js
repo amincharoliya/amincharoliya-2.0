@@ -7,14 +7,14 @@ import { getAllPosts } from '../lib/blog/posts';
 import { projects, testimonials, work } from '../utils/data';
 import Projects from '../components/Home/Projects';
 
-export default function Home({ posts }) {
+export default function Home({ posts, projects, testimonials, work }) {
 	return (
 		<Layout>
 			<Banner />
 			<BlogList posts={posts} />
 			<Testimonials testimonials={testimonials} />
 			<WorkHistory work={work} />
-			<Projects projects={projects} />
+			<Projects projects={projects.reverse()} />
 		</Layout>
 	);
 }

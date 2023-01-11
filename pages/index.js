@@ -8,13 +8,14 @@ import { projects, testimonials, work } from '../utils/data';
 import Projects from '../components/Home/Projects';
 
 export default function Home({ posts, projects, testimonials, work }) {
+	const projectReversed = projects.sort((a, b) => b.id - a.id);
 	return (
 		<Layout>
 			<Banner />
 			<BlogList posts={posts} />
 			<Testimonials testimonials={testimonials} />
 			<WorkHistory work={work} />
-			<Projects projects={projects.reverse()} />
+			<Projects projects={projectReversed} />
 		</Layout>
 	);
 }

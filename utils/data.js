@@ -148,7 +148,14 @@ export const projects = [
 		name: 'Quote Machine',
 		description:
 			'Where user creates a profile, shares quotes and like quotes from other users. Ability to update profile details.',
-		technologies: ['Next JS', 'Typescript', 'MongoDB', 'Next Auth', 'CURD'],
+		technologies: [
+			'Next JS',
+			'Typescript',
+			'MongoDB',
+			'Next Auth',
+			'Tailwind',
+			'CURD',
+		],
 		image: 'quote-machine.png',
 		link: 'https://the-quote-machine.vercel.app/',
 		git: 'https://github.com/amincharoliya/quotes-machine',
